@@ -1,0 +1,457 @@
+// config
+@base-color-one: #1f2430;
+@base-color-two: #273549;
+@base-color-three: #3a506b;
+@bg-color: #fcfcfc;
+@grey: #e2e2e2;
+
+// RESET
+body, div, ul, ol, li, dl, dt, dd, h1, h2, h3, h4, h5, h6, p, blockquote{
+	margin: 0;
+	padding: 0;
+}
+
+::selection{
+	background: rgba(58,80,107,.8);
+	color: #fff;
+	text-shadow: none;
+}
+
+a, button, input, textarea{
+	outline: none;
+}
+
+a{
+	text-decoration: none;
+	outline: none;
+}
+
+img{
+	border: 0;
+	vertical-align: middle;
+}
+
+a, button{
+	transition: all .3s;
+	cursor: pointer;
+}
+
+.clearfix:after{
+	content:"";
+	display:block;
+	clear:both;
+}
+
+.clearfix{
+	zoom:1;
+}
+
+html{
+	width: 100%;
+	height: 100%;
+}
+body{
+	width: 100%;
+	background-color: @bg-color;
+	color: @base-color-one;
+	font-size: 14px;
+	font-family: 'Helvetica', Verdana, Helvetica, "Microsoft Yahei", "Hiragino Sans GB", sans-serif;
+	text-rendering: optimizeLegibility;
+	-webkit-font-smoothing: antialiased;
+	min-height: 100%;
+	height: 100%;
+	overflow-x: hidden;
+}
+
+#app{
+	height: 100%;
+}
+.container{
+	width: 1500px;
+	box-sizing: border-box;
+	margin: 0 auto;
+}
+
+@media all and (max-width: 1550px) {
+	.container{
+		width: 1200px;
+	}
+}
+@media all and (max-width: 1250px) {
+	.container{
+		width: 1000px;
+	}
+}
+@media all and (max-width: 1150px) {
+	.container{
+		width: 900px;
+	}
+}
+@media all and (max-width: 950px) {
+	.container{
+		width: 600px;
+	}
+}
+@media all and (max-width: 650px) {
+	.container{
+		width: 100%;
+		padding: 0 15px;
+	}
+}
+
+[v-cloak] { display: none; }
+
+// fonts
+@font-face {
+	font-family: 'icomoon';
+	src:  url('../fonts/icomoon.eot?lslzjq');
+	src:  url('../fonts/icomoon.eot?lslzjq#iefix') format('embedded-opentype'),
+		url('../fonts/icomoon.ttf?lslzjq') format('truetype'),
+		url('../fonts/icomoon.woff?lslzjq') format('woff'),
+		url('../fonts/icomoon.svg?lslzjq#icomoon') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+i {
+	/* use !important to prevent issues with browser extensions that change fonts */
+	font-family: 'icomoon' !important;
+	speak: none;
+	font-style: normal;
+	font-weight: normal;
+	font-variant: normal;
+	text-transform: none;
+	line-height: 1;
+
+	/* Better Font Rendering =========== */
+	-webkit-font-smoothing: antialiased;
+	-moz-osx-font-smoothing: grayscale;
+}
+
+.icon-logo:before {
+	content: "\e904";
+}
+.icon-gayhub:before {
+	content: "\e900";
+}
+.icon-sina:before {
+	content: "\e901";
+}
+.icon-wechat:before {
+	content: "\e902";
+}
+.icon-zhihu:before {
+	content: "\e903";
+}
+.icon-image:before {
+	content: "\e90d";
+}
+.icon-book:before {
+	content: "\e91f";
+}
+.icon-envelop:before {
+	content: "\e945";
+}
+.icon-display:before {
+	content: "\e956";
+}
+.icon-mobile:before {
+	content: "\e958";
+}
+.icon-user:before {
+	content: "\e971";
+}
+.icon-lab:before {
+	content: "\e9aa";
+}
+.icon-menu:before {
+	content: "\e9bd";
+}
+.icon-switch:before {
+	content: "\e9b6";
+}
+.icon-undo2:before {
+	content: "\e967";
+}
+
+// 滚动条
+.define-scrollbar{
+	&::-webkit-scrollbar{
+		width: 6px;
+		height: 6px;
+	}
+	&::-webkit-scrollbar-track-piece {
+		background: #eee;
+	}
+	&::-webkit-scrollbar-thumb{
+		background-color: #999;
+		border-radius: 5px;
+	}
+}
+
+// front页面切换动画
+.bounce-enter{
+	animation: bounce-in .3s;
+}
+
+.bounce-leave{
+	animation: bounce-out .3s;
+}
+
+@keyframes bounce-in {
+	0% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+}
+
+@keyframes bounce-out {
+	0% {
+		opacity: 1;
+		transform: translateX(0px);
+	}
+	100% {
+		opacity: 0;
+		transform: translateX(20px);
+	}
+}
+
+//admin页面切换动画
+.sildeDown-enter{
+	animation: silde-in .3s;
+}
+
+.sildeDown-leave{
+	animation: silde-out .3s;
+}
+
+@keyframes silde-in {
+	0% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+	100% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+}
+
+@keyframes silde-out {
+	0% {
+		opacity: 1;
+		transform: translateY(0px);
+	}
+	100% {
+		opacity: 0;
+		transform: translateY(20px);
+	}
+}
+
+// 重写fadeInDown动画
+
+@keyframes fadeInDownCustom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20%, 0);
+    transform: translate3d(0, -20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInDownCustom {
+  -webkit-animation-name: fadeInDownCustom;
+  animation-name: fadeInDownCustom;
+}
+
+// 重写fadeInUp动画
+
+@keyframes fadeInUpCustom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 20%, 0);
+    transform: translate3d(0, 20%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInUpCustom {
+  -webkit-animation-name: fadeInUpCustom;
+  animation-name: fadeInUpCustom;
+}
+
+// 重写fadeInLeft动画
+
+@keyframes fadeInLeftCustom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-20%, 0, 0);
+    transform: translate3d(-20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+.fadeInLeftCustom {
+  -webkit-animation-name: fadeInLeftCustom;
+  animation-name: fadeInLeftCustom;
+}
+
+// 重写fadeInRight动画
+
+@keyframes fadeInRightCustom {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(20%, 0, 0);
+    transform: translate3d(20%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+
+// 设备缩放1150px
+@media all and (max-width: 1150px) {
+	@keyframes fadeInLeftCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(-20%, 0, 0) scale(.8);
+	    transform: translate3d(-20%, 0, 0) scale(.8);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.8);
+	    transform: scale(.8);
+	  }
+	}
+	@keyframes fadeInRightCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(20%, 0, 0) scale(.8);
+	    transform: translate3d(20%, 0, 0) scale(.8);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.8);
+	    transform: scale(.8);
+	  }
+	}
+}
+
+// 设备缩放950px
+@media all and (max-width: 950px) {
+	@keyframes fadeInLeftCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(-20%, 0, 0) scale(.6);
+	    transform: translate3d(-20%, 0, 0) scale(.6);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.6);
+	    transform: scale(.6);
+	  }
+	}
+	@keyframes fadeInRightCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(20%, 0, 0) scale(.6);
+	    transform: translate3d(20%, 0, 0) scale(.6);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.6);
+	    transform: scale(.6);
+	  }
+	}
+}
+
+// 设备缩放650px
+@media all and (max-width: 650px) {
+	@keyframes fadeInLeftCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(-20%, 0, 0) scale(.4);
+	    transform: translate3d(-20%, 0, 0) scale(.4);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.4);
+	    transform: scale(.4);
+	  }
+	}
+	@keyframes fadeInRightCustom {
+	  from {
+	    opacity: 0;
+	    -webkit-transform: translate3d(20%, 0, 0) scale(.4);
+	    transform: translate3d(20%, 0, 0) scale(.4);
+	  }
+
+	  to {
+	    opacity: 1;
+	    -webkit-transform: scale(.4);
+	    transform: scale(.4);
+	  }
+	}
+}
+
+.fadeInRightCustom {
+  -webkit-animation-name: fadeInRightCustom;
+  animation-name: fadeInRightCustom;
+}
+
+@keyframes inShow {
+	from {
+		transform: translate3d(0, -70%, 0) scale(.9);
+		visibility: visible;
+		opacity: 0;
+	}
+	to {
+		transform: translate3d(0,0,0) scale(1);
+		opacity: 1
+	}
+}
+
+.inShow{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: inShow;
+}
+
+@keyframes progressShow {
+	0% {
+		width: 0;
+	}
+}
+
+.progressShow{
+  animation-duration: 1s;
+  animation-fill-mode: both;
+  animation-name: progressShow;
+}
+

@@ -1,0 +1,139 @@
+.markdown-wrapper{
+	width: 100%;
+	font-size: 16px;
+	line-height: 27px;
+	overflow: auto;
+	border-top-width: 0;
+	border-right-width: 0;
+	padding-left: 5px;
+	padding-right: 5px;
+	font-family: PingFang SC,Hiragino Sans GB,Helvetica Neue,Microsoft Yahei,WenQuanYi Micro Hei,sans-serif;
+	h1, h2, h3, h4, h5, h6, p, blockquote{
+		margin: 0;
+		padding: 0;
+	}
+	h1, h2, h3, h4, h5, h6{
+		margin: 10px 0;
+		font-family: inherit;
+		font-weight: 700;
+		line-height: 20px;
+		color: inherit;
+		text-rendering: optimizelegibility;
+	}
+	h1, h2, h3{
+		line-height: 40px;
+	}
+	h1{
+		margin: 20px 0;
+		font-size: 30px;
+	}
+	h2{
+		margin: 35px 0 20px;
+		font-size: 26px;
+	}
+	h3{
+		margin: 20px 0;
+		font-size: 21px;
+	}
+	a{
+		color: #47699a;
+		transition: all .2s;
+		&:hover, &:active, &:visited{
+			color: #273549
+		}
+	}
+	ul, ol{
+		padding: 0;
+		margin: 0 0 10px 25px;
+	}
+	li{
+		line-height: 27px;
+	}
+	hr{
+		border: 0;
+		border-bottom: 1px dashed #cfcfcf;
+		margin: 30px 0;
+	}
+	&>p, &>pre, &>blockquote {
+		margin: 0 0 20px;
+	}
+	blockquote{
+		padding: 10px 15px;
+		border-left-style: solid;
+		border-left-width: 10px;
+		border-color: #D6DBDF;
+		background: none repeat scroll 0 0 rgba(102,128,153,.05);
+		p{
+			font-size: 16px;
+			font-weight: 300;
+			line-height: 25px;
+		}
+		p:last-child{
+			margin-bottom: 0;
+		}
+	}
+	code, pre{
+		padding: 0 3px 2px;
+		font-family: Monaco,Menlo,Consolas,"Courier New",monospace;
+		font-size: 12px;
+		-webkit-border-radius: 3px;
+		-moz-border-radius: 3px;
+		border-radius: 3px;
+	}
+	code{
+		background: #D6DBDF;
+		text-shadow: 0 1px #fff;
+		padding: 0 0.3em;
+	}
+	pre{
+		background-color: #1d1f21;
+		color: #c5c8c6;
+		max-width: 100%;
+		overflow-x: auto;
+		line-height: 20px;
+		padding: 20px;
+		code{
+			background-color: transparent;
+			text-shadow: none;
+			border: 0;
+			border-radius: 4px;
+			font-size: 14px;
+			padding: 2px 4px;
+			line-height: 16px;
+		}
+	}
+	strong{
+		font-weight: 700;
+	}
+	table{
+		box-sizing: border-box;
+		max-width: 100%;
+		width: 100%;
+		background-color: transparent;
+		border-collapse: collapse;
+		border-spacing: 0;
+		border: 1px solid #ddd;
+		border-collapse: separate;
+		border-left: 0;
+		th, td{
+			border-left: 1px solid #ddd;
+			padding: 8px;
+			line-height: 20px;
+			text-align: left;
+			vertical-align: top;
+			border-top: 1px solid #ddd;
+		}
+		tbody>tr:nth-child(2n+1)>td, 
+		tbody>tr:nth-child(2n+1)>th{
+			background-color: rgba(102,128,153,.05);
+		}
+	}
+	img{
+		max-width: 100%;
+		height: auto;
+		display: block;
+		vertical-align: middle;
+		box-sizing: border-box;
+		margin: 0 auto;
+	}
+}
