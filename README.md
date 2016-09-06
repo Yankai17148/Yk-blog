@@ -1,12 +1,10 @@
 # 个人博客
---------
 
 使用node.js + MongoDB开发的个人博客系统，前后端分离的单页应用。
 
 > `web-project` 文件夹为客户端代码，需配合服务端运行。
 
 ##开发
---------
 
 ```shell
 $ npm install
@@ -18,7 +16,6 @@ $ node app.js
 ```
 
 ##目录结构
---------
 
 ```
 ·
@@ -35,7 +32,6 @@ $ node app.js
 ```
 
 ##使用pm2部署
--------
 
 ```shell
 $ pm2 start app.js

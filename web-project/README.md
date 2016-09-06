@@ -1,11 +1,9 @@
 # 个人博客-Vue客户端
---------
 
 使用Vue + Vue-router + Vue-resource搭建的个人博客界面。
 
 
 ##开发
---------
 
 ```shell
 $ npm install
@@ -13,14 +11,12 @@ $ npm run dev
 ```
 
 ##打包
---------
 
 ```shell
 $ npm run build
 ```
 
 ##目录结构
---------
 
 ```
 ·
