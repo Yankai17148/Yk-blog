@@ -10,7 +10,7 @@
 					<th>操作</th>
 				</tr>
 				<tr class="list-item" v-for="item in list">
-					<td><a v-link="">{{item.title}}</a></td>
+					<td><a v-link="{name: 'article-detail', params: {id: item._id}}" target="_blank">{{item.title}}</a></td>
 					<td>{{item.create_time | formateDate}}</td>
 					<td>{{item.update_time | formateDate}}</td>
 					<td>
@@ -129,6 +129,14 @@
 				td{
 					padding: 15px 0;
 					border-bottom: 1px solid #ccc;
+					a{
+						color: #273549;
+						transition: all .3s;
+						&:hover{
+							color: #1f2430;
+							text-decoration: underline;
+						}
+					}
 				}
 				th{
 					font-size: 16px;

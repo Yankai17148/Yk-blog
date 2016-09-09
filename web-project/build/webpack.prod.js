@@ -1,9 +1,12 @@
 'use strict'
 
 const webpack = require('webpack');
+const exec = require('child_process').exec;
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
 const config = require('./webpack.base');
 const pkg = require('../package');
+
+exec('rm -rf dist/');
 
 config.entry.vendor = Object.keys(pkg.dependencies);
 

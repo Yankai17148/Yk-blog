@@ -1,5 +1,6 @@
 <template>
 	<div>
+		<loading :loading="loading"></loading>
 		<div class="container article-detail">
 			<h1 class="detail-title">{{article.title}}</h1>
 			<span class="detail-create-time">发表于 {{article.create_time | formateDate}}</span>
@@ -10,10 +11,13 @@
 </template>
 
 <script>
+	import loading from '../../components/loading.vue'
+
 	export default {
 		data() {
 			return {
-				article: {}
+				article: {},
+				loading: false
 			}
 		},
 		route: {
@@ -25,6 +29,9 @@
 					this.article = res.data
 				})
 			}
+		},
+		components: {
+			loading
 		}
 	}
 </script>
