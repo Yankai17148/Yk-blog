@@ -68,6 +68,7 @@ router.redirect({
 	'*': '/home'
 })
 
+console.log('%c { Have Suggest? issues me! }', 'font-family: Monaco;font-size: 15px;line-height: 60px; color: #ccc; font-weight: bold;')
 
 router.start(app, '#app')
 
