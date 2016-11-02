@@ -4,6 +4,12 @@
 
 > `web-project` 文件夹为客户端代码，需配合服务端运行。
 
+##开始
+
+```shell
+$ git clone https://github.com/Yankai17148/Yk-blog.git
+```
+
 ##开发
 
 ```shell
