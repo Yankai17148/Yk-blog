@@ -48,5 +48,9 @@ export default {
 			}
 		}
 
+	},
+	'/singup': {
+		name: 'signup',
+		component: require('../views/sign-up.vue')
 	}
 }
