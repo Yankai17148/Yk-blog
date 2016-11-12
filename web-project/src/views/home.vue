@@ -2,6 +2,7 @@
 	<div class="home">
 		<home-banner></home-banner>
 		<div class="container">
+			<loading :loading="loading"></loading>
 			<section class="top-four-container">
 				<div class="top-article-item" v-for="item of topArticles">
 					<div class="article-index-img">
