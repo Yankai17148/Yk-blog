@@ -33,25 +33,30 @@
 <script>
 	import homeBanner from '../components/home-banner.vue'
 	import deviceModel from '../components/device-model.vue'
+	import loading from '../components/loading.vue'
 
 	export default {
 		data() {
 			return {
 				msg: '',
-				topArticles: []
+				topArticles: [],
+				loading: false
 			}
 		},
 		route: {
 			data(transition) {
 				this.$parent.isFront = true
+				this.loading = true
 				this.$http.get('/api/article/getIndexArticles').then((response) => {
 					let res = response.json()
 					this.topArticles = res.data
+					this.loading = false
 				})
 			}
 		},
 		components: {
 			homeBanner,
+			loading,
 			deviceModel
 		}
 	}
