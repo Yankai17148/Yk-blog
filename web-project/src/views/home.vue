@@ -14,7 +14,7 @@
 		</div>
 		<section class="middle-tips">
 			<div class="left-side-pic"></div>
-			<div class="wow fadeInDownCustom right-side-text" data-wow-offset="200"><span>专注前端，会一点后端，会一点设计，热衷于一切美好的事物。</span></div>
+			<div class="wow fadeInDownCustom right-side-text" data-wow-offset="200"><span>专注前端，会一点后端，会一点设计，热衷于一切美好的事物.</span></div>
 		</section>
 		<section class="responsive">
 			<h2 class="index-title">采用响应式设计</h2>
