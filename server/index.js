@@ -26,7 +26,7 @@ app.use(session({
 app.use(express.static(publicDir));
 
 
-var db = mongoose.connect('mongodb://Yankai:yk17148@localhost:27017/blog');
+var db = mongoose.connect('mongodb://blog:yk17148@localhost:27017/blog');
 
 var modelsPath = path.join(__dirname, 'db');
 
