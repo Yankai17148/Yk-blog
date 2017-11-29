@@ -49,7 +49,7 @@ export default {
 		}
 
 	},
-	'/singup': {
+	'/signup': {
 		name: 'signup',
 		component: require('../views/sign-up.vue')
 	}
