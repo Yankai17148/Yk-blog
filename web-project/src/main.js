@@ -52,6 +52,10 @@ router.map(routes)
 
 router.beforeEach((transition) => {
 	// window.scrollTo(0, 0)
+	//加入百度统计页面的代码
+	if (transition.to.path) {
+		_hmt.push(['_trackPageview', transition.to.path]);
+	}
 	if (transition.to.auth) {
 		if (cookieUtil.getCookie('isLogin') == '1') {
 			transition.next()

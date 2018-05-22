@@ -1,7 +1,7 @@
 <template>
 	<section class="home-banner">
 		<section class="typeing-text">
-			<div class="content"></div>
+			<div class="content" @click="tongji"></div>
 			<span class="dash"></span>
 		</section>
 	</section>
@@ -33,6 +33,11 @@
 					this.index++
 					setTimeout(() => {that.write()}, that.speed)
 				}
+			},
+			// 百度统计的设置
+			tongji() {
+				_hmt.push(['_trackEvent', 'bannertext', 'click', 'bannertext']);
+				console.log('you clicked it!');
 			}
 		}
 	}
